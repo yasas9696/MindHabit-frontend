@@ -1,0 +1,65 @@
+<mat-card class="main-card">
+  <mat-card-header>
+    <mat-card-title>All Authors</mat-card-title>
+
+    <span class="mousepointer" (click)='refresh()'>
+      <i class="material-icons" >
+        cached
+      </i>
+    </span>
+    
+  </mat-card-header>
+
+  <div class="actionContainer">
+    
+    <mat-form-field class="searchBar">
+      <input matInput  placeholder="Search here" (keyup)="applyFilter($event.target.value)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef>
+        <h3>First Name</h3>
+      </th>
+      <td mat-cell *matCellDef="let author"> {{author.fname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef>
+        <h3>Last Name</h3>
+      </th>
+      <td mat-cell *matCellDef="let author"> {{author.lname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="aucode">
+      <th mat-header-cell *matHeaderCellDef>
+        <h3>Author Code</h3>
+      </th>
+      <td mat-cell *matCellDef="let author"> {{author.authorCode}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>
+        <h3>action</h3>
+      </th>
+      <td mat-cell *matCellDef="let author"> 
+          <button mat-raised-button color="warn" (click)='removeAuthor(author)'>remove</button>
+          <button mat-raised-button color="primary" (click)='upateAuthor(author)'>update</button>
+
+
+      
+      </td>
+    </ng-container>
+
+
+   
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <span id="rpt"></span>
+
+</mat-card>

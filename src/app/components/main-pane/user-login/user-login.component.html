@@ -1,0 +1,41 @@
+<div class="dive">
+<mat-card class="centercontainer">
+  <!-- <h4>Dentaly</h4> -->
+  <div class="logoClass">
+  
+  <p class="poweredby">MindHabit</p>
+  <img
+            src="https://cdn0.iconfinder.com/data/icons/flat-security-icons/512/lock-open.png"
+            class="prof-pic"
+          />
+
+
+  <div class="headerString">
+    <p style="text-align:center">Sign in <br>
+      <small>to continue MindHabit</small></p>
+  </div>
+</div>
+
+
+
+  <form class="loginForm">
+    <mat-form-field style="width:100%" >
+      <input matInput placeholder="Username"
+      [(ngModel)]="username" name="username"   >
+    </mat-form-field>
+
+    <mat-form-field style="width:100%" >
+      <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="Password" >
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" style="float:right" (click)="signIn() " class="primary">Sign in</button>
+    <button mat-button  color="primary">Forget password?</button>
+    <span class="span1" (click)="hello()" >Create your account</span>
+  </form>
+    
+  <mat-divider></mat-divider>
+  <br>
+  <p class="mat-small" style="text-align:center">For any login issues, please contact your Librariyan.</p>
+  
+</mat-card>
+</div>

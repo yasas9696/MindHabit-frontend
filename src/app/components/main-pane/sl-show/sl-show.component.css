@@ -1,0 +1,27 @@
+.example-card {
+    max-width: 100%;
+    max-height: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-block-end: 5%;
+    background: white;
+  opacity: 0.7;
+  
+  
+  padding-top: 2%;
+    
+  }
+  .ccc{
+    width: 50%;
+  }
+  
+  .example-header-image {
+    background-image: url('http://content.sportslogos.net/logos/6/214/full/797.gif');
+    background-size: cover;
+    font-weight: bold;
+  }
+
+.slide_show_01
+{
+  margin-top: 100px !important;
+}

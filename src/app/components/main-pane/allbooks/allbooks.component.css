@@ -1,0 +1,50 @@
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.main-card {
+    margin: 10px;
+}
+
+ng-container {
+    text-align: center
+}
+
+th.mat-header-cell {
+    width: 150px;
+    border-radius: 5px !important;
+}
+
+.searchBar {
+    max-width: 30%;
+    float: right;
+}
+
+.actionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-radius: 5px !important;
+}
+
+.add-items {
+    color: #039be5;
+}
+
+.add-button {
+    color: #fff;
+}
+
+.mousepointer {
+    color: darkslateblue;
+}
+
+.mousepointer:hover {
+    cursor: pointer;
+    color: blue
+}

@@ -1,0 +1,79 @@
+<mat-card class="main-card">
+    <mat-card-header>
+      <mat-card-title>All Borrowed Books</mat-card-title>
+      
+      <span class="mousepointer" (click)='refresh()'>
+        <i class="material-icons" >
+          cached
+        </i>
+      </span>
+      
+    </mat-card-header>
+  
+    <div class="actionContainer">
+      <!-- <button mat-flat-button color="primary" class="add-button" (click)="openAddUser()">
+        <mat-icon>add</mat-icon>
+        Add new book
+      </button> -->
+      <mat-form-field class="searchBar">
+        <input matInput  placeholder="Search here" (keyup)="applyFilter($event.target.value)">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="Username">
+        <th mat-header-cell *matHeaderCellDef>
+          <h3>Username</h3>
+        </th>
+        <td mat-cell *matCellDef="let borrow"> {{borrow.User.username}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Book Name">
+        <th mat-header-cell *matHeaderCellDef>
+          <h3>Book Name</h3>
+        </th>
+        <td mat-cell *matCellDef="let borrow"> {{borrow.Book.bname}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="borrowedDate">
+          <th mat-header-cell *matHeaderCellDef>
+            <h3>borrowedDate</h3>
+          </th>
+          <td mat-cell *matCellDef="let borrow"> {{borrow.borrowed_date}} </td>
+        </ng-container>
+        <ng-container matColumnDef="returnDate">
+          <th mat-header-cell *matHeaderCellDef>
+            <h3>returnDate</h3>
+          </th>
+          <td mat-cell *matCellDef="let borrow"> {{borrow.return_date}} </td>
+        </ng-container>
+        <ng-container matColumnDef="fines">
+          <th mat-header-cell *matHeaderCellDef>
+            <h3>fines</h3>
+          </th>
+          <td mat-cell *matCellDef="let borrow"> {{borrow.fines}} </td>
+        </ng-container>
+  
+      <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef>
+            <h3>action</h3>
+          </th>
+          <td mat-cell *matCellDef="let borrow"> 
+              <button mat-raised-button color="warn" (click)='removeBook(borrow)'>remove</button>
+             
+  
+  
+          
+          </td>
+        </ng-container>
+  
+     
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <span id="rpt"></span>
+  
+  </mat-card>

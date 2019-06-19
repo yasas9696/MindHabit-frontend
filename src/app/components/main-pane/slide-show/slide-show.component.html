@@ -1,0 +1,21 @@
+<div class="dive">
+  <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Our Services</mat-card-title>
+    <mat-card-subtitle>familier with us</mat-card-subtitle>
+  </mat-card-header>
+  <slideshow class="slide_show_01" [height]="height"
+  [minHeight]="'525px'"
+  [autoPlay]="true"
+  [showArrows]="false"
+  [imageUrls]="imageSources"
+  [lazyLoad]="imageSources?.length > 1"
+  [autoPlayWaitForLazyLoad]="true">
+</slideshow>
+  
+</mat-card>
+</div>
+
+
+

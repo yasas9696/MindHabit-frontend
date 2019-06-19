@@ -1,0 +1,56 @@
+<div class="dive"> 
+  <mat-card class="matcard">
+      <mat-card-header><h2><b>update Book</b></h2></mat-card-header>
+             
+              <mat-card-content class="container">
+  <form action="/action_page.php">
+
+    <label for="fname">Book Name</label>
+    <input type="text" name="Book Name" [(ngModel)]='book.bname' placeholder="Book Name..">
+<br>
+    <label for="Catagory">Catagory</label>
+    <select id="Catagory" name="Catagory"  [(ngModel)]='book.category'>
+      <option value="cat 1">Horror</option>
+      <option value="cat2">Love Story</option>
+      <option value="cat3">Crime</option>
+      <option value="cat4">Biography</option>
+      <option value="cat4">Cartoons</option>
+    </select>
+
+    <label for="fname">Author </label>
+    <input type="text"  name="aucode" [(ngModel)]='book.author' placeholder="Author Name...">
+<br>
+    
+    
+    
+    
+    <label for="fname">Book Code</label>
+    <input type="text"  [(ngModel)]='book.bookcode' name="BookCode" placeholder="Book code..">
+
+    <label for="fname">Price</label>
+    <input type="number"  [(ngModel)]='book.price' name="price" placeholder=""><br>
+    <br>
+
+    <label for="fname">No of Books</label>
+    <input type="number" name="BookCode"  [(ngModel)]='book.noOfBooks' placeholder="Book code..">
+    <br><br>
+
+    
+<br><br>
+<mat-card-actions class="buttonContainer">
+  <button mat-button color="warn" (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="update()">update</button>
+ 
+  </mat-card-actions>
+ 
+    </form>
+
+   
+
+
+    
+    </mat-card-content>
+    </mat-card>
+    <br>
+   
+    </div>

@@ -1,0 +1,72 @@
+<div class="dive"> 
+<mat-card >
+      
+      
+<div class="dive">
+
+        <mat-card-content class="container">
+
+            <form class="loginForm">
+
+                <mat-form-field class="user-full-width">
+                    <input matInput placeholder="Full Name" name="name" [(ngModel)]='email.name' required />
+                </mat-form-field>
+                    
+                <mat-form-field class="user-full-width">
+                    <input matInput placeholder="Your E-mail" name="email" [(ngModel)]='email.email' required />
+                </mat-form-field>
+                            
+                           
+                <mat-form-field class="user-full-width">
+                    <textarea matInput placeholder="Your message"  name="message" [(ngModel)]='email.message' style="height: 15px" required
+                    ></textarea>
+                </mat-form-field>
+
+            </form>
+
+        </mat-card-content>
+
+  
+   <mat-card-actions class="buttonContainer">
+        
+        <button mat-flat-button class="primary" color="primary" (click)="sendmail()">
+          Send
+        </button>
+      
+      </mat-card-actions>
+      
+      </div>
+
+      <table class="middle">
+          <td>
+                <h2 class="cu_title_01">Telephone</h2>
+                <p class="cu_des_01">011-2533274</p>
+                <p class="cu_des_01">011-2878570</p>
+                <p class="cu_des_01">077-4533277</p>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+                <h2 class="cu_title_01">Address</h2>
+                <p class="cu_des_01">140,</p>
+                <p class="cu_des_01">Main Av, Colombo-10</p>
+                <p class="cu_des_01">Sri Lanka</p>
+          </td>
+
+
+      </table>
+     
+</mat-card>
+</div>
+                      
+
+
+
+
+

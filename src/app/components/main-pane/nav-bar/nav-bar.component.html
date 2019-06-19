@@ -1,0 +1,26 @@
+
+<div *ngIf="islogedin">
+  <h3></h3>
+  <ul class="example-button-row3">
+    <li><a  [routerLink]="['/slideshow']"   routerLinkActive="active">Home</a></li>
+    <li><a [routerLink]="['/all-books']"  routerLinkActive="active">Collection</a></li>
+    <li><a [routerLink]="['/profile-user']"  routerLinkActive="active" >My Account</a></li>
+    <li><a [routerLink]="['/contact-us']"  routerLinkActive="active">Contacts</a></li>
+    <li><a [routerLink]="['/about-us']"  routerLinkActive="active">About Us</a></li>
+    
+  </ul>
+  
+  
+  <h3></h3>
+  <div class="example-button-row1" *ngIf="isadmin">
+    <button mat-raised-button  (click)="allUsers()">ALL USERS</button>
+    <button mat-raised-button  (click)="addBook()">BOOK</button>
+    <button mat-raised-button (click)="addAuthor()">AUTHOR</button>
+
+    <button mat-raised-button (click)="borrowBook()">BORROW</button>
+    
+  
+    
+  </div>
+  <h3></h3>
+</div>

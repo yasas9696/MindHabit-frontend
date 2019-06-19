@@ -1,0 +1,33 @@
+.searchBar {
+    max-width: 100%; 
+    width: 500px;
+    float: center;
+    color: rgb(14, 9, 83);
+}
+.buttons{
+    float: right;
+}
+.header{
+    font-family: comic sans MS;
+    float: left;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 40%;
+    margin-left: 10px;
+    color: rgb(29, 12, 90);
+
+}
+.matcard{
+    background: white;
+    opacity: 1;
+    
+    
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.example-header-image {
+    background-image: url('http://content.sportslogos.net/logos/6/214/full/797.gif');
+    background-size: cover;
+    font-weight: bold;
+  }
